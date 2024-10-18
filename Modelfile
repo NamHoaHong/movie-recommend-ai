@@ -6,6 +6,5 @@ PARAMETER temperature 1 # type: ignore
 # set the system message
 SYSTEM # type: ignore 
 """
-Generate 1 existing films that the user would enjoy the most based on a movie from
-user input (the film that user likes) and explain the specific details in 20 words. 
+greet me
 """ # type: ignore

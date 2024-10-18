@@ -1,0 +1,112 @@
+/* General Styling */
+body {
+  background-color: #1c1c1c; /* Dark background for contrast */
+  color: #e6e600; /* Soft yellow text */
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: #ffd700; /* Bright gold for the header */
+}
+
+/* Chat History Styling */
+#chat {
+  width: 60%;
+  margin: 2rem auto;
+  background-color: #333333; /* Darker gray for chat background */
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-height: 400px;
+  overflow-y: auto; /* Allow scrolling if the chat gets too long */
+  display: none; /* Hide chat by default */
+}
+
+#chat ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#chat li {
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #ffec99; /* Light yellow for chat entries */
+  border-bottom: 1px solid #666666; /* Thin border to separate entries */
+}
+
+#chat li:last-child {
+  border-bottom: none;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#user_input {
+  flex: 1;
+  max-width: 60%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #292929;
+  color: #ffd700;
+  font-size: 1rem;
+}
+
+#user_input::placeholder {
+  color: #cccccc; /* Placeholder color */
+}
+
+button[type="submit"] {
+  background-color: #ffd700;
+  color: #1c1c1c;
+  border: 2px solid #ffd700;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ffdd57; /* Brighter yellow on hover */
+  border-color: #ffdd57;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98); /* Button feedback on click */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #292929; /* Darker track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffec99; /* Light yellow scrollbar */
+  border-radius: 8px;
+}
+
+/* Make chat visible once messages are added */
+#chat.active {
+  display: block;
+}
+
+input:focus {
+  outline: none; /* This removes the blue focus border */
+  box-shadow: none; /* Removes Bootstrap's default shadow effect */
+  border-color: gray; /* Optional: Customize border color on focus */
+}
